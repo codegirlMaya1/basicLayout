@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Solutions</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: darkblue;
+            color: aliceblue;
+        }
+        .navbar {
+            background-color: black;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .card {
+            margin: 20px;
+            color: darkblue;
+        }
+        .contact-form {
+            margin-top: 50px;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: darkblue;
+        }
+        .enlarge-image {
+            transition: transform 0.5s ease;
+        }
+        .enlarge-image:hover {
+            transform: scale(1.5);
+        }
+        .enlarge-text {
+            transition: font-size 0.5s ease;
+        }
+        .enlarge-text:hover {
+            font-size: 5em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Tech Solutions</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="about-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-form" id="contact-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.0Z3MedIftNbB8nRj2KI75gHaF8?w=254&h=203&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">MOBILE PHONES</h5>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita commodi quasi consectetur veniam placeat, in explicabo, assumenda ex ratione tempora distinctio reiciendis earum minus dolor eligendi nesciunt pariatur ullam?.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.20zWU7sBKztE7pLhkdrBTAHaHa?w=184&h=184&c=7&r=0&o=5&pid=1.7 " class="card-img-top enlarge-image" alt="Image 2" id="image2">
+                    <div class="card-body">
+                        <h5 class="card-title">TABLETS</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad labore exercitationem fugit porro culpa quidem fugiat consectetur architecto ratione dolore facere earum minima, ullam eum eligendi accusamus sint eveniet. Eveniet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.DxzeZjIEEsWrrLlSnEg1twHaEh?w=300&h=184&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">LAPTOPS</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, nesciunt aliquid veritatis, rerum hic vero aut a cupiditate sapiente commodi officiis! Vel repudiandae sint laborum aperiam ad fugiat, odit reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form" id="contact-form">
+            <h2 class="enlarge-text" id="contact-text">Contact Us</h2>
+            <form action="destination.html" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tech Solutions. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('about-link').addEventListener('click', function() {
+            var image2 = document.getElementById('image2');
+            image2.classList.toggle('enlarge-image');
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function() {
+            var contactText = document.getElementById('contact-text');
+            contactText.classList.toggle('enlarge-text');
+        });
+    </script>
+</body>
+</html>
